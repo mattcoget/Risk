@@ -18,13 +18,16 @@ class Player:
 
 def play_game():
     nb_players = phase_initialize()
-    all_players[0].countries.append(get_country(0)) 
+    all_players[0].countries.append(get_country(0))
+    get_country(0).owner = all_players[0]
     print(nb_players, "players")
     game_not_finished = True
     while game_not_finished:
-        user_turn(None, all_players[0])
-        time.sleep(1)
-        break
+        for p in all_players:
+            if p != None:
+                user_turn(None, p)
+                if len(p.countries) == len(all_countries):
+                    game_not_finished = False
     #for each player launch user turn after each player played
 
 def phase_initialize():
@@ -142,12 +145,15 @@ def user_turn(self, player):
     attack(self, player)
     fortify(self, player)
     print(player.name, "turn is finished!")
+    
 
 def print_list_countries(country_list):
     for i in country_list:
-        print(i.name, i.country_number, i.neighbours, i.soldiers)
+        print(i.name, "- country number", i.country_number, "with", i.soldiers, "soldiers")
 
-
+def print_list_neighbours(country_list):
+    for i in country_list:
+        print("The number of", i.name, "neighbours are", i.neighbours)
 
 
 #Function reinforcement
@@ -160,30 +166,7 @@ def reinforcement(self, player):
     else:
         new_soldiers = len(player.countries/3)+1
             
-    #list of countries from a continent
-    africa =  [8, 9, 12, 21, 25, 34]
-    asia = [1, 7, 16, 18, 19, 20, 22, 23, 32, 33, 37, 42]
-    europe = [13, 15, 26, 31, 35, 36, 40]
-    north_america = [2, 3, 6, 11, 14, 27, 28, 30, 41]
-    oceania = [10, 17, 24, 39]
-    south_america = [4, 5, 29, 38]
-
-    #reinforcement based of the continents owned
-
-    for i in player.countries:
-        if africa in player.countries:
-            new_soldiers += 3
-        elif asia in player.countries:
-            new_soldiers += 7
-        elif europe in player.countries:
-            new_soldiers +=5
-        elif north_america in player.countries:
-            new_soldiers += 5
-        elif oceania in player.countries:
-            new_soldiers += 2
-        elif south_america in player.countries:
-            new_soldiers += 2
-
+    
     #placing new soldiers
     
     while new_soldiers > 0:
@@ -383,4 +366,3 @@ def fortify(self, player):
 # --------------------------------------
 # RUN GAME
 play_game()
-print(player_1.soldiers)
