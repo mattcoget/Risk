@@ -30,7 +30,6 @@ What does your repository look like? Explain your folder and file structure.
 
 ## Links
 
-[Repository]https://github.com/meitarkeshet/data-ft-par-labs.git
-
+[Repository](https://github.com/meitarkeshet/data-ft-par-labs.git)
 [Slides](https://docs.google.com/presentation/d/1auTK6s23Et1NBtyk9NZnr07vQm8zUIONXWLPboGMMqs/edit#slide=id.gab419b1a1e_1_54)  
-[Trello] https://trello.com/b/zo1VoaqD/python-project-risk  
+[Trello] (https://trello.com/b/zo1VoaqD/python-project-risk)
