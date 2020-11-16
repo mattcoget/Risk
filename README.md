@@ -1,6 +1,6 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Title of Your Project
+# Soldiers & Dices (Risk)
 *Matthieu Coget & Meitar Keshet*
 
 *Data analysis, Paris, November 2020*
