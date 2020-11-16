@@ -13,7 +13,7 @@
 - [Links](#links)
 
 ## Project Description
-We wrote a python adeptation of the board game "Risk". 
+We wrote a python adaptation of the board game "Risk". 
 
 ## Rules
 OBJECTIVE:  The object of the game is to occupy every territory on the board and in doing so, eliminate the other players. The game of world domination!
@@ -21,7 +21,10 @@ NUMBER OF PLAYERS: 2-6 players
 read more: https://www.ultraboardgames.com/risk/game-rules.php
 
 ## Workflow
-Outline the workflow you used in your project. What are the steps you went through?
+1. Define the game and the rules
+2. Split the work between initialization and gameplay
+3. Connect the two parts
+4. Test the game
 
 ## Organization
 We first planned out the code roughly as a flow chart (google draw). Then we made  seperate missions on trello
